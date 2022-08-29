@@ -3,11 +3,6 @@ const choices = ["rock", "paper", "scissors"];
 function getComputerChoice() {
   return choices[Math.floor(Math.random() * choices.length)];
 }
-const computerSelection = getComputerChoice();
-console.log(`Computer choice: ${getComputerChoice()}`);
-
-const playerSelection = "paper";
-console.log(`Player choice: ${playerSelection}`);
 
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
@@ -27,4 +22,10 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-// console.log(playRound(playerSelection, computerSelection));
+const computerSelection = getComputerChoice();
+console.log(`Computer choice: ${getComputerChoice()}`);
+
+const playerSelection = "paper";
+console.log(`Player choice: ${playerSelection}`);
+
+console.log(playRound(playerSelection, computerSelection));
