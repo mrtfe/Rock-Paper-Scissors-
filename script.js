@@ -58,15 +58,19 @@ function playRound(playerSelection, computerSelection) {
   checkIfTheGameIsOver();
 }
 
+function gameReset() {
+  playerPoints = 0;
+  computerPoints = 0;
+}
+
 function checkIfTheGameIsOver() {
-  console.log("checking the winner");
   if (playerPoints == 5 || computerPoints == 5) {
     if (playerPoints > computerPoints) {
-      console.log("player won");
       winnerBox.innerHTML = "PLAYER WON!";
+      gameReset();
     } else if (computerPoints > playerPoints) {
-      console.log("computer won");
       winnerBox.innerHTML = "COMPUTER WON!";
+      gameReset();
     } else {
       console.log("game is running");
     }
