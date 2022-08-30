@@ -1,5 +1,5 @@
 body {
-  background-color: rgba(71, 5, 133, 0.884);
+  background-color: #85144b;
   color: white;
   font-size: 20px;
   font-family: sans-serif;
@@ -40,7 +40,19 @@ p {
 }
 
 .choices__container img {
-  /* max-width: 20%; */
   max-height: 200px;
   border-radius: 7px;
+}
+
+img:hover {
+  transform: scale(1.05);
+  transition: all ease;
+  border-radius: 15px;
+  box-shadow: 0 0 5px rgb(136, 219, 140);
+}
+
+.game-log__container {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
 }
