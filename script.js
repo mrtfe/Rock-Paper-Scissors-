@@ -4,6 +4,7 @@ const SCISSORS = document.querySelector(".scissors");
 const playerLiveResult = document.querySelector(".player-live-result");
 const computerLiveResult = document.querySelector(".computer-live-result");
 const gameLog = document.querySelector(".game-log__container");
+const winnerBox = document.querySelectorAll(".winner__container");
 
 ROCK.addEventListener("click", () => {
   playRound("rock", getComputerChoice());
@@ -54,23 +55,29 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-function game() {
-  for (i = 0; i <= 5; i++) {
-    let playerSelection = "paper";
-    let computerSelection = getComputerChoice();
-    console.log(`result is: `, playRound(playerSelection, computerSelection));
-    console.log(playerPoints);
-    console.log(computerPoints);
+function checkIfTheGameIsOver() {
+  console.log("checking the winner");
+  if (playerPoints == 5 || computerPoints == 5) {
+    if (playerPoints > computerPoints) {
+      return console.log("player won");
+    } else if (computerPoints > playerPoints) {
+      return console.log("computer won");
+    } else {
+      return console.log("game is running");
+    }
   }
 }
 
-// const computerSelection = getComputerChoice();
-// console.log(`Computer choice: ${computerSelection}`);
-
-// const playerSelection = "paper";
-// console.log(`Player choice: ${playerSelection}`);
-
-// console.log(playRound(playerSelection, computerSelection));
-
-// console.log(`Player points: ${playerPoints}`);
-// console.log(`Computer points: ${computerPoints}`);
+// function checkTheWinner() {
+//   if (playerPoints == 5 || computerPoints == 5) {
+//     if (playerPoints > computerPoints) {
+//       console.log("you won");
+//       winnerBox.innerHTML = "YOU WON!";
+//     } else if (computerPoints > playerPoints) {
+//       console.log("computer won");
+//       winnerBox.innerHTML = "COMPUTER WON";
+//     } else {
+//       console.log("GAME IS RUNNING");
+//     }
+//   }
+// }

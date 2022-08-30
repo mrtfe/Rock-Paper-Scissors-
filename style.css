@@ -40,8 +40,9 @@ p {
 }
 
 .choices__container img {
-  max-height: 200px;
+  height: 200px;
   border-radius: 7px;
+  width: 150px;
 }
 
 img:hover {
