@@ -57,3 +57,11 @@ img:hover {
   justify-content: center;
   padding-top: 30px;
 }
+
+.winner__container {
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  padding-top: 30px;
+}
