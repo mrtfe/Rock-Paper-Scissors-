@@ -1,0 +1,46 @@
+body {
+  background-color: rgba(71, 5, 133, 0.884);
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.results__container {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.player-result__container {
+  display: flex;
+  gap: 10px;
+}
+
+.computer-result__container {
+  display: flex;
+  gap: 10px;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.choices__container {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.choices__container img {
+  /* max-width: 20%; */
+  max-height: 200px;
+  border-radius: 7px;
+}
