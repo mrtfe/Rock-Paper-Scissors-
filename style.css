@@ -1,8 +1,8 @@
 body {
   background-color: #85144b;
   color: white;
-  font-size: 20px;
-  font-family: sans-serif;
+  /* font-size: 20px; */
+  font-family: fantasy;
 }
 
 .results__container {
@@ -12,8 +12,8 @@ body {
   justify-content: space-between;
   padding-top: 50px;
   color: white;
-  font-size: 20px;
-  font-family: sans-serif;
+  font-size: 30px;
+  /* font-family: sans-serif; */
 }
 
 .player-result__container {
@@ -29,7 +29,8 @@ body {
 p {
   display: flex;
   justify-content: center;
-  padding-top: 50px;
+  padding-top: 20px;
+  font-size: 30px;
 }
 
 .choices__container {
@@ -64,4 +65,20 @@ img:hover {
   justify-content: center;
   font-weight: 700;
   padding-top: 30px;
+}
+
+.play-again {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  margin: 0 auto;
+  font-family: fantasy;
+  font-weight: 500;
+}
+
+.play-again-btn_container {
+  display: flex;
+  justify-content: center;
+  display: none;
 }

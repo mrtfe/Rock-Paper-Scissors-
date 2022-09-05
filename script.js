@@ -5,8 +5,7 @@ const playerLiveResult = document.querySelector(".player-live-result");
 const computerLiveResult = document.querySelector(".computer-live-result");
 const gameLog = document.querySelector(".game-log__container");
 const winnerBox = document.querySelector(".winner__container");
-
-console.log(winnerBox);
+const playAgainBtn = document.querySelector(".play-again-btn_container");
 
 ROCK.addEventListener("click", () => {
   playRound("rock", getComputerChoice());
@@ -63,13 +62,29 @@ function gameReset() {
   computerPoints = 0;
 }
 
+playAgainBtn.addEventListener("click", () => {
+  gameReset();
+  console.log("Play again button clicked");
+});
+
+function gameOverAnimation() {
+  ROCK.disabled = true;
+  PAPER.disabled = true;
+  SCISSORS.disabled = true;
+  gameLog.style.display = "none";
+  playAgainBtn.style.display = "flex";
+  console.log("game finished");
+}
+
 function checkIfTheGameIsOver() {
   if (playerPoints == 5 || computerPoints == 5) {
     if (playerPoints > computerPoints) {
       winnerBox.innerHTML = "PLAYER WON!";
+      gameOverAnimation();
       gameReset();
     } else if (computerPoints > playerPoints) {
       winnerBox.innerHTML = "COMPUTER WON!";
+      gameOverAnimation();
       gameReset();
     } else {
       console.log("game is running");
