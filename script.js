@@ -64,13 +64,15 @@ function gameReset() {
 
 playAgainBtn.addEventListener("click", () => {
   gameReset();
-  console.log("Play again button clicked");
+  playerLiveResult.innerHTML = playerPoints;
+  computerLiveResult.innerHTML = computerPoints;
+  playAgainBtn.style.display = "none";
+  winnerBox.style.display = "none";
+  gameLog.style.display = "flex";
 });
 
 function gameOverAnimation() {
-  ROCK.disabled = true;
-  PAPER.disabled = true;
-  SCISSORS.disabled = true;
+  gameLog.innerHTML = "";
   gameLog.style.display = "none";
   playAgainBtn.style.display = "flex";
   console.log("game finished");
@@ -80,12 +82,12 @@ function checkIfTheGameIsOver() {
   if (playerPoints == 5 || computerPoints == 5) {
     if (playerPoints > computerPoints) {
       winnerBox.innerHTML = "PLAYER WON!";
+      winnerBox.style.display = "flex";
       gameOverAnimation();
-      gameReset();
     } else if (computerPoints > playerPoints) {
       winnerBox.innerHTML = "COMPUTER WON!";
+      winnerBox.style.display = "flex";
       gameOverAnimation();
-      gameReset();
     } else {
       console.log("game is running");
     }
