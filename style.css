@@ -1,7 +1,6 @@
 body {
   background-color: #85144b;
   color: white;
-  /* font-size: 20px; */
   font-family: fantasy;
 }
 
@@ -13,7 +12,6 @@ body {
   padding-top: 50px;
   color: white;
   font-size: 30px;
-  /* font-family: sans-serif; */
 }
 
 .player-result__container {
