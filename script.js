@@ -68,6 +68,7 @@ playAgainBtn.addEventListener("click", () => {
   computerLiveResult.innerHTML = computerPoints;
   playAgainBtn.style.display = "none";
   winnerBox.style.display = "none";
+  gameLog.innerHTML = null;
   gameLog.style.display = "flex";
 });
 
